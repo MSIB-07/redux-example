@@ -11,7 +11,7 @@ function App() {
   // example read state from redux
   const { movies, favoriteMovies } = useSelector((state) => state.movie)
 
-  console.log(movies[0], "<< movies");
+  // console.log(movies[0], "<< movies");
   console.log(favoriteMovies, "<< favorite movies");
 
   useEffect(() => {
@@ -33,7 +33,7 @@ function App() {
           return (
             <div>
               <label>{item.title}</label>
-              <button onClick={(item) => addToFavorite(item)}>Add to favorite</button>
+              <button onClick={() => addToFavorite(item)}>Add to favorite</button>
             </div>
           )
         })
