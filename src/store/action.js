@@ -4,7 +4,7 @@ import action_key from "../constants/action-key";
 export const fetchAllMovies = () => {
   return async (dispatch) => {
     
-    const response = await axios.get(process.env.REACT_APP_JSON_PLACE_HOLDER_URL)
+    const response = await axios.get(process.env.REACT_APP_JSON_PLACE_HOLDER_URL) // change url based on your API
 
     dispatch({
       type: action_key.FETCH_ALL_MOVIES,
@@ -16,7 +16,7 @@ export const fetchAllMovies = () => {
 export const fetchProducst = () => {
   return async (dispatch) => {
     
-    const response = await axios.get(process.env.REACT_APP_JSON_PLACE_HOLDER_URL)
+    const response = await axios.get(process.env.REACT_APP_JSON_PLACE_HOLDER_URL) // change url based on your API
 
     dispatch({
       type: action_key.FETCH_PRODUCTS,

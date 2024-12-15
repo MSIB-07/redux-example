@@ -3,6 +3,7 @@ import action_key from "../constants/action-key";
 const initialState = {
   movies: [],
   movie: {},
+  favoriteMovies: [],
   products: [],
 };
 
@@ -17,6 +18,14 @@ export default function movieReducer(state = initialState, action) {
       return {
         ...state,
         movies: action.payload,
+      };
+    case action_key.ADD_FAVORITE_MOVIE:
+      const currentState = state.favoriteMovies
+      currentState.push(action.payload)
+
+      return {
+        ...state,
+        favoriteMovies: currentState
       };
     case action_key.FETCH_PRODUCTS:
       return {
